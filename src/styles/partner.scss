@@ -1,0 +1,80 @@
+@import "variables";
+@import "mixins";
+
+.partner {
+    @media screen and (max-width: 960px) {
+        .partner-image {
+            background-color: $violet-text6 !important;
+            background-image: none  !important;
+            height: auto !important;
+            justify-content: center !important;
+        }
+        .partner-section {
+            padding: 0 !important;
+        }
+        .text__title {
+            font-size: 30px !important;
+            font-weight: 600 !important;
+            letter-spacing: -1px !important;
+            line-height: 40px !important;
+        }
+        .text__subtitle {
+            font-size: 16px !important;
+            font-style: normal !important;
+            font-weight: 400 !important;
+            letter-spacing: -.1px !important;
+            text-decoration: none !important;
+            text-transform: none !important;
+        }
+    }
+    .partner-image {
+        background-image: url('../images/2rH3ZrF.png');
+        height: 600px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        display: flex;
+        justify-content: right;
+        flex-direction: row;
+        align-items: center;
+        padding: 60px 100px;  
+    }
+        .partner-section {
+            padding-left: 50px;
+        }
+            .text {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+                .text__uppertitle {
+                    @include text_p_white();
+                    font-size: 20px;
+                    margin: 0px 0px 8px;
+                }
+                
+                .text__title {
+                    @include text_h1_white();
+                    font-size: 54px;
+                }
+                
+                .text__subtitle {
+                    @include text_p_white();
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+
+                .partner__download {
+                    @include button_white();
+                    background-color: $red;
+                    max-width: 335px;
+                    width: 100%;
+                    margin-top: 30px;
+                }
+
+                .partner__download:hover {
+                    background-color: $red2;
+                    border: 0px none;
+                    cursor: pointer;
+                }
+}

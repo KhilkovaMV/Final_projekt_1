@@ -1,0 +1,63 @@
+@import "variables";
+@import "mixins";
+
+.clients {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $gray3;
+    margin: 0 auto;
+    overflow: hidden;
+    
+    @media screen and (max-width: 850px) {
+        
+    }
+    .clients__title {
+        @include text_h1_dark();
+        font-size: 38px;
+        margin: 10px 10px;
+        text-align: center;
+    }
+
+    .clients__uppertitle {
+        @include text_p_dark1();
+        font-size: 18px;
+        margin: 30px 0px 30px 0px;
+    }
+    .clients-section {
+        display: flex;
+        margin: 0 auto;
+        max-width: 700px;
+        justify-content: center;
+        animation: ClientLogo 10s linear 5s infinite;
+    }
+
+    @keyframes ClientLogo {
+        0% {
+            transform: translate(-100%);
+        }
+        25% {
+            transform: translate(-50%);
+        }
+        50% {
+            transform: translate(0);
+        }
+        75% {
+            transform: translate(50%);
+        }
+        100% {
+            transform: translate(100%);
+        }
+    }
+        .clients-section__logo {
+            width: auto;
+            max-height: 400px;
+            object-fit: cover;
+        }
+
+        .clients-section__logo:hover {
+            @include hovers();
+            cursor: pointer;
+        }
+}

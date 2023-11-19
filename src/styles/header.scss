@@ -1,0 +1,100 @@
+@import "variables";
+@import "mixins";
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $white;
+    height: auto;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+    @media screen and (max-width: 857px) {           
+        .header-navigation__normal {
+            display: none;         
+        }
+
+        .header-btn__dark {
+            display: none;
+        }
+        .header-navigation__vector {
+            background-color: $violet-main;
+            width: 34px;
+            height: 34px;
+            border-radius: 6px;
+            margin: auto;
+            padding: 10px;
+            margin-right: 20px;
+            display: block !important;
+        }
+    }
+
+    .header-logo {
+        width: 100%;
+        max-width: 141px;
+        padding-left: 15px;
+    }    
+
+    .header-logo__logo {    
+        border-width: 0;
+        width: 85%;
+        max-width: 141px;
+        background-image: url('../images/5Pu8W35.png');
+        height: 75px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 0;
+    }
+    
+    .header-logo__logo:hover {
+        @include hovers();
+    }
+
+    .header-navigation {
+        display: flex;
+    }
+        .header-navigation__normal {
+            color: $blue-text;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: -.1px;
+            line-height: 40px;
+            text-decoration: none;
+            text-transform: none;    
+            padding: 15px 20px;  
+        }
+        
+        .header-navigation-loupe__img {
+            width: 20px;
+            margin: 11px 15px 0 -6px;
+            padding: 15px 0px;
+        }
+        .header-navigation-loupe__img:hover {
+            @include hovers();
+        }
+
+        .header-btn__dark {
+            background-color: $violet-main;
+            border: 0 solid $white;
+            border-radius: 15px;
+            color: $white;
+            padding: 20px 30px;
+            font-weight: 800;
+            text-align: center;
+            font-size: 16.56px;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        .header-btn__dark:hover {
+            @include hovers();
+            background-color: $violet-text7;
+        }
+
+        .header-navigation__vector {
+            display: none;
+        }
+
+}

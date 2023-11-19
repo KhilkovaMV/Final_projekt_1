@@ -1,0 +1,88 @@
+@import "variables";
+@import "mixins";
+
+
+.footer {
+    @media (max-width: 768px) {
+        .footer-columns {
+            grid-template-columns: repeat(1, auto) !important;
+        }
+        .footer-section {
+            flex-wrap: wrap;
+            justify-content: left !important;
+        }
+    
+        .subfooter {
+            flex-wrap: wrap;
+        }
+    }    
+
+    .footer-section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        gap: 30px;
+        padding: 40px 20px 0px;
+    }
+            .footer-logo__logo {    
+                border-width: 0;
+                width: 100%;
+                max-width: 180px;
+                background-image: url('../images/5Pu8W35.png');
+                height: 77px;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: center;
+                padding: 0;
+            }
+
+            .footer-logo__logo:hover {
+                @include hovers();
+                cursor: pointer;
+            }
+
+            .footer-logo__text {
+                @include text_p_dark2();
+            }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+        }
+
+            .footer-columns-item__title {
+                @include text_p_dark1();
+                font-size: 18px;
+                line-height: 32px !important;
+                margin-bottom: 16px;
+                margin-top: 0px;
+            }
+
+            .footer-columns-item__subtitle {
+                @include text_p_dark2();
+                text-decoration: none;
+                text-transform: none;
+                margin-bottom: 12px;
+            }
+    .subfooter {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 30px;
+        padding: 40px 20px 20px;
+        margin: 0 auto;
+        width: 85%;
+        border-top: 1px solid #E7E8F1;
+    }
+            .footer-icons__media {
+                text-align: center;
+                margin-bottom: 8px;
+                border-radius: 50px;
+                height: 47px !important;
+                border: 0px;
+                border-width: 0px;
+                margin-right: 5px;
+            }
+}

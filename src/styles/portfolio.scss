@@ -1,0 +1,56 @@
+@import "variables";
+@import "mixins";
+
+.portfolio {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 40px 20px;
+    @media screen and (max-width: 850px) {
+        .portfolio-container {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+        .portfolio__title {
+            @include text_h1_dark();
+            font-size: 38px;
+            margin: 10px 10px;
+        }
+        .portfolio__uppertitle {
+            @include text_p_dark1();
+            font-size: 18px;
+            margin: 30px 0px 30px 0px;        
+        }
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+            .portfolio-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid $gray2;
+                border-radius: 10px;
+                max-width: 370px;
+                background-color: #FAFAFC;
+                padding: 24px 24px 16px 24px;
+            }
+            .portfolio-item:hover {
+                @include hovers();
+                cursor: pointer;
+            } 
+                .portfolio-item__img {
+                    border-radius: 15px;
+                    max-width: 100%;
+                    height: auto;
+                    margin-bottom: 20px;
+                }
+                .portfolio-item__title {
+                    @include text_h3_dark();
+                    margin-bottom: 30px;                
+                }
+}

@@ -1,0 +1,101 @@
+@mixin hovers {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 0px $gray;
+    transition: 0.5s;
+}
+@mixin font {
+    font-family: Plus Jakarta Sans, sans-serif;
+}
+@mixin text_h1_white {
+    font-size: 48px;
+    letter-spacing: -.1px;
+    line-height: 62px;
+    color: $white;
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-weight: 700;
+}
+
+@mixin text_h1_dark {
+    letter-spacing: -.1px;
+    color: $violet-text1;
+    font-weight: 700;
+}
+
+@mixin text_p_white {
+    font-family: Plus Jakarta Sans, sans-serif; 
+    font-weight: 400;
+    color: $white;
+    letter-spacing: -.1px;
+    line-height: 27px;   
+}
+
+@mixin text_p_dark {
+    color: $violet-text3;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height: 27px;
+}
+
+@mixin text_p_dark1 {
+    color: $violet-text2;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height: 27px;
+}
+
+@mixin text_p_dark2 {
+    color: $violet-text4;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height: 27px;
+    font-size: 16px;
+}
+
+@mixin text_h3_dark {
+    font-size: 24px;
+    line-height: 34px;
+    color: $blue-text;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+@mixin text_a_dark {
+    color: $violet-text3;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    line-height: 27px;
+    font-size: 18px;
+    text-align: center;
+}
+
+@mixin button_white {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 0px none $black;
+    border-radius: 15px;
+    color: $white;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-family: 'Plus Jakarta Sans',sans-serif;
+}
+
+@mixin button_dark {
+    width: 100%;
+    display: block;
+    text-align: center;
+    border: 0px none $black;
+    border-radius: 15px;
+    color: $violet-main;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px 35px;    
+    font-family: 'Plus Jakarta Sans',sans-serif; 
+}
+
+
+
+

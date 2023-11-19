@@ -1,0 +1,75 @@
+@import "variables";
+@import "mixins";
+
+.digital {
+    @media screen and (max-width: 684px) {
+        .Digital-section {
+            padding-left: 0px !important;
+        }
+        .Digital-image {
+            padding-left: 20px !important;
+        }
+        .text__title {
+            margin: 0 auto; 
+        }
+    }
+
+    .digital-image {
+        background-image: url('../images/fS69hFJ.png');
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+        align-items: center;
+        padding: 100px 80px;      
+
+        .digital-section {
+            padding-left: 50px;
+        }
+            .text {
+                margin-bottom: 30px;
+            }
+
+                .text__uppertitle {
+                    @include text_p_white();
+                    font-size: 20px;
+                    margin: 0px 0px 8px;
+                }
+                .text__title {
+                    @include text_h1_white();
+                    font-size: 54px;
+                }
+                
+                .text__subtitle {
+                    @include text_p_white();
+                    font-size: 18px;
+                }    
+            .download {
+                display: flex;
+                justify-content: start;
+                flex-direction: row;
+                align-items: center;
+                gap: 30px;
+            }
+                .download__str {
+                    @include button_white();
+                    background-color: $green2;
+                    max-width: 195px;
+                    width: 100%;
+                }
+                .download__str:hover {
+                    background-color: $green;
+                    border: 0px none;
+                    cursor: pointer;
+                }
+                .download__aus {
+                    @include button_dark();
+                    background-color: $white;
+                    max-width: 170px;
+                    width: 100%;
+                    cursor: pointer;
+                }
+    }
+}

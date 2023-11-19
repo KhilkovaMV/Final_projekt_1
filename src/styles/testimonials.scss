@@ -1,0 +1,120 @@
+@import "variables";
+@import "mixins";
+
+.testimonials {     
+    @media screen and (max-width: 960px) {
+        .slade-block {
+            width: 85%;
+            flex-wrap: wrap;
+        }
+        .slade-right-footer {
+            flex-wrap: wrap;                                        
+        }
+    }
+    .testimonials-image {
+        background-image: url('../images/lG74DuL.png');
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        padding: 60px;  
+    }
+        .testimonials-section {
+            padding-left: 50px;
+        }
+            .text {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+                .text__uppertitle {
+                    @include text_p_white();
+                    font-size: 20px;
+                    margin: 0px 0px 8px;
+                    text-align: center;
+                }
+                .text__title {
+                    @include text_h1_white();
+                    font-size: 38px;
+                    text-align: center;
+                    margin-bottom: 40px;
+                }               
+
+                .slade-block {
+                    display: flex;
+                    gap: 30px;
+                    justify-content: space-around;
+                    flex-direction: row;
+                    align-items: center;
+                    padding: 30px;
+                    background-color: $gray3;
+                    border-radius: 10px;
+                    text-align: left;
+                    margin: auto;
+                    max-width: 1000px;
+                    padding: 36px;
+                    transition: transform 0.3s ease;
+                } 
+                .slade-block:hover {
+                    @include hovers();
+                } 
+
+                    .slade-left__image {
+                        width: 300px;
+                        height: 350px;
+                        background-size: 100%;
+                        border-radius: 36px;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                    .slade-left__image1 {
+                        height: 300px;
+                        border-radius: 150px;
+                    }
+           
+                        .slade-right__title {
+                            @include text_h3_dark();
+                            font-weight: 700 !important;                        
+                        }
+                        
+                        .slade-right__subtitle {
+                            @include text_a_dark();                                                       
+                        }
+
+                        .slade-right-footer {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            margin-top: 50px;                            
+                        }
+                        
+                        .slade-right__name {
+                            @include text_h3_dark();
+                            font-weight: 700 !important;
+                            font-size: 18px !important;
+                        }
+                        .slade-right__position {
+                            @include text_p_dark1();
+                            font-size: 18px;
+                        }
+
+                        .slade-right-logo {
+                            display: flex;
+                            justify-content: right;                            
+                        }
+
+                        .slade-right-logo__image {
+                            max-width: 341px;
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+                            justify-content: right;                            
+                        }
+                        .testimonials-button {
+                            border-radius: 50% !important;
+                        }
+}

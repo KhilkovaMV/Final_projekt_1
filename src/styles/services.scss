@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixins";
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $gray3;
+    margin: 0 auto;
+
+    @media screen and (max-width: 850px) {
+        .services-container {
+            grid-template-columns: repeat(1, 1fr) !important;
+        }
+    }
+
+    .services__title {
+        @include text_h1_dark();
+        font-size: 38px;
+        margin: 10px 10px;
+        text-align: center;
+    }
+
+    .services__uppertitle {
+        @include text_p_dark1();
+        font-size: 18px;
+        margin: 30px 0px 30px 0px;        
+    }
+
+    .services-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+        .services-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 315px;
+            padding: 28px;
+            background-color: $white;
+            border: 1px solid $gray2;
+            border-radius: 10px;
+            margin-top: 27px;
+        }
+        .services-item:hover {
+            @include hovers();
+            cursor: pointer;
+        }      
+   
+            .services-item__icon {
+                border-radius: 10px;
+                width: 60px;
+                height: 60px;
+            }
+            .services-item__title {
+                @include text_h3_dark();
+                text-align: center;                
+            }
+            .services-item__subtitle {
+                @include text_a_dark();                
+            }
+            
+    .services__subtitle {
+        @include text_a_dark();
+        margin-top: 30px;
+    }
+    
+    .services__download {
+        @include button_white();
+        background-color: $violet-text5;
+        max-width: 335px;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+
+    .services__download:hover {
+        background-color: $violet-main;
+        border: 0px none;
+        cursor: pointer;
+    }    
+
+}

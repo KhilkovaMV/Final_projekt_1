@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+
+.vision {
+    .vision-image {
+        background-image: url('../images/uTVlmO3.png');
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: left;
+        flex-direction: row;
+        align-items: center;
+        padding: 60px;      
+
+        .vision-section {
+            padding-left: 50px;
+        }
+            .text {
+                margin-bottom: 30px;
+                display: flex;
+                flex-direction: column;
+            }
+                .text__uppertitle {
+                    @include text_p_white();
+                    font-size: 20px;
+                    margin: 0px 0px 8px;
+                }
+                .text__title {
+                    @include text_h1_white();
+                    font-size: 54px;
+                }
+                
+                .text__subtitle {
+                    @include text_p_white();
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+                .text__icon {
+                    max-width: 334px;
+                    width: 100%;
+                    height: auto;
+                }    
+    }
+}
